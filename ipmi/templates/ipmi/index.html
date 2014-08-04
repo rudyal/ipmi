@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<html>
+    <head>
+		{% load staticfiles %}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'ipmi/css/style.css' %}" />
+		<!-- <link rel="stylesheet" type="text/css" href="{% static 'polls/css/demo.css' %}" /> -->
+		<script src="{% static 'ipmi/js/jquery-1.11.1.min.js' %}"></script>
+		
+        <script src="{% static 'ipmi/js/classie.js' %}"></script>
+        <!-- <script src="{% static 'ipmi/js/custom.js' %}"></script>-->
+    <head>
+    </head>
+    <body>
+    <div id="nav-bar">
+		<div id="inner-nav">
+			<img src="{% static 'ipmi/images/logo.png' %}" alt="CBTS Logo" height="56" width="199">
+		</div>
+	</div>
+
+
+	<div class="largeCon">
+	
+	<div class="container_12">
+
+		{% if ipmi_info %}
+		    {% for ipmi in ipmi_info %}
+		    	<div class="card-con">
+					<div class="card" onclick="this.classList.toggle('flipped')">
+						<div class="card-front">
+							<div class="card-head">{{ ipmi.serv_name }}</div>
+							<div class="card-line"> </div>
+							<div class="card-body">
+								<ul class="card-ul-label">
+									<li class="card-li-label">Power</li>
+									<li class="card-li-label">CPU</li>
+									<li class="card-li-label">FAN</li>
+									<li class="card-li-label">AIR</li>
+									<li class="card-li-label">KNOX</li>
+									<li class="card-li-label">Meta</li>
+								</ul>
+								<ul class="card-ul">
+									<li class="card-li">{{ ipmi.power }}</li>
+									<li class="card-li">{{ ipmi.cpu_temp }}</li>
+									<li class="card-li">{{ ipmi.fan_speed }}</li>
+									<li class="card-li">{{ ipmi.air }}</li>
+									<li class="card-li">{{ ipmi.knox }}</li>
+									<li class="card-li">{{ ipmi.meta1 }}</li>
+								</ul>
+							</div>
+							<div class="card-bottom"> </div>
+						</div>
+						<div class="card-back"> 
+							<div class="back-info">
+								<ul class="card-ul">
+									<li class="card-li">{{ ipmi.owner }}</li>
+									<li class="card-li">{{ ipmi.description }}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+		    {% endfor %}
+		{% else %}
+		    <p>No polls are available.</p>
+		{% endif %}
+
+	</div>
+	</div>
+
+	
+	<!-- end .container_16 -->
+</body>
+</html>

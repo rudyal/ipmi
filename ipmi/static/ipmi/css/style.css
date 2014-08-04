@@ -1,0 +1,168 @@
+/* line 8, ../scss/style.scss */
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 13, ../scss/style.scss */
+body {
+  margin: 0px;
+  margin-top: 0px;
+  padding: 0px;
+  background-image: url("../images/back.png");
+  background-repeat: repeat;
+}
+
+/* line 29, ../scss/style.scss */
+#nav-bar {
+  width: 100%;
+  min-width: 300px;
+  height: 80px;
+  background-image: -moz-linear-gradient(#8c8c8c, #4d4d4d);
+  background-image: -webkit-linear-gradient(#8c8c8c, #4d4d4d);
+  background-image: linear-gradient(#8c8c8c, #4d4d4d);
+  -moz-box-shadow: #8c8c8c 1px 6px 15px;
+  -webkit-box-shadow: #8c8c8c 1px 6px 15px;
+  box-shadow: #8c8c8c 1px 6px 15px;
+  padding: 0px;
+}
+
+/* line 38, ../scss/style.scss */
+#inner-nav {
+  padding: 10px 10px 10px 60px;
+}
+
+/* line 42, ../scss/style.scss */
+.largeCon {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 48, ../scss/style.scss */
+.card {
+  width: 106px;
+  height: 171px;
+  background-color: #18852A;
+  font-size: 28px;
+  color: white;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  /*transition*/
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  /*transform-style*/
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* line 57, ../scss/style.scss */
+.card .card-head {
+  height: 35px;
+  padding-top: 3px;
+  padding-left: 10px;
+}
+/* line 62, ../scss/style.scss */
+.card .card-body {
+  padding-top: 3px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+/* line 66, ../scss/style.scss */
+.card .card-body ul.card-ul {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  font-size: 10px;
+  width: 30px;
+  float: right;
+}
+/* line 76, ../scss/style.scss */
+.card .card-body ul.card-ul-label {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  list-style-type: none;
+  position: fixed;
+  font-size: 10px;
+  width: 30px;
+}
+/* line 86, ../scss/style.scss */
+.card .card-line {
+  height: 3px;
+  width: 106px;
+  background-color: #A79A9A;
+}
+
+/* line 104, ../scss/style.scss */
+.card-con {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  width: 106px;
+  display: inline-block;
+  margin: 15px 7px 10px 10px;
+}
+
+/* line 115, ../scss/style.scss */
+.flipped {
+  /*transform*/
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 124, ../scss/style.scss */
+.card-front {
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 135, ../scss/style.scss */
+.card-back {
+  font-size: 12px;
+  width: 106px;
+  height: 171px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 136, ../scss/style.scss */
+.card-back .back-info {
+  margin: 10px;
+}
+/* line 138, ../scss/style.scss */
+.card-back .back-info ul.card-ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}

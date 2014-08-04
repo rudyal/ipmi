@@ -1,0 +1,40 @@
+@import "breakpoint";
+@import "compass";
+
+$small: max-width 450px;
+$medium: 450px 890px;
+$large: min-width 880px;
+
+html{
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	margin: 0px;
+	margin-top: 0px;
+	padding: 0px;
+  background-image:url('../images/back.png');
+	background-repeat:repeat;
+  @include breakpoint($small){
+    background-image: none;
+    background-color:green;
+  }
+  @include breakpoint($medium){
+    background-image: none;
+    background-color:blue;
+  }
+}
+
+#nav-bar{
+	width: 100%;
+	min-width: 300px;
+	height: 80px;
+	@include background-image(linear-gradient(#8C8C8C, #4D4D4D));
+	@include box-shadow(#8C8C8C 36px 6px 15px);
+	// margin-top: -20px;
+	padding: 0px;
+}
+#inner-nav{
+	padding: 10px 10px 10px 60px;
+}
