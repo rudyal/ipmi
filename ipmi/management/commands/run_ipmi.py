@@ -5,6 +5,7 @@ from django.utils import translation
 import subprocess
 #import paramiko
 
+# 0. Find hosting for django project
 # 1. add ipmi script
     #a. ipmi may not(will not) run due to windows OS
 # 2. alter ipmi script to save to DB
@@ -17,7 +18,8 @@ class Command(NoArgsCommand):
     def handle_noargs(self, **options):
         self.stdout.write(' ')
         self.stdout.write('IPMI commands executed')
-
+        p = subprocess.Popen(["C:"], stdout = subprocess.PIPE)
+        self.stdout.write(p)
         #Put Script Here
 
         #While inside server loop
